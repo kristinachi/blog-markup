@@ -1,0 +1,258 @@
+.grid-container {
+  overflow: auto;
+  padding-top: 72px;
+}
+
+.main-grid {
+  display: grid;
+  margin-top: 65px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 24px;
+}
+
+
+.card {
+  display: grid;
+  grid-template-rows: [head] 32px [main] minmax(0, 1fr) [foot] 68px;
+  min-height: 280px;
+  box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.06);
+
+  &__head {
+    // border-top-left-radius: 8px;
+    // border-top-right-radius: 8px;
+    border-radius: 8px 8px 0 0;
+    grid-row: head;
+    // background-color: $white;
+    background-color: red;
+  }
+
+  &__main {
+    grid-row: main;
+    // background-color: $white;
+    background-color: yellow;
+    // font-size: 36px;
+    // line-height: 44px;
+    // color: $blue;
+    // padding: 24px;
+  }
+
+  &__foot {
+    grid-row: foot;
+    // display: flex;
+    // align-items: center;
+    border-radius: 0 0 8px 8px;
+    // border-bottom-left-radius: 8px;
+    // border-bottom-right-radius: 8px;
+    // background-color: $white;
+    background-color: red;
+
+  //   &__img {
+  //     width: 24px;
+  //     height: 24px;
+  //     border-radius: 50%;
+  //     background-color: $gray;
+  //     margin: 0 10px 0 16px;
+  //     overflow: hidden;
+  //   }
+
+  //   img {
+  //     width: 100%;
+  //     height: 100%;
+  //     object-fit: cover;
+  //   }
+
+  //   &__name {
+  //     font-size: 14px;
+  //     line-height: 19px;
+  //     font-weight: 600;
+  //     color: $blue;
+  //   }
+
+  //   &__share {
+  //     display: flex;
+  //     font-size: 18px;
+  //     line-height: 25px;
+  //     color: $primary;
+  //     margin-left: 132px;
+  //   }
+  // }
+}
+
+// .card-link {
+//   display: flex;
+
+//   &__shared {
+//     padding-left: 23px;
+//     color: $blue;
+//     font-size: 16px;
+//     line-height: 32px;
+//     font-weight: 600;
+//   }
+
+//   &__show {
+//     margin-left: 115px;
+//     // padding: 0px -20px;
+//   }
+
+//   &__liked {
+//     padding: 0px 10px;
+
+//     i {
+//       color: $primary;
+//     }
+//   }
+// }
+
+// .card__sharedtag {
+//   padding-left: 23px;
+//   color: $blue;
+//   font-size: 16px;
+//   line-height: 32px;
+//   font-weight: 600;
+// }
+
+// .card-tag {
+//   background: #ecf1f8;
+//   border-radius: 6px;
+//   font-weight: 600;
+//   font-size: 16px;
+//   line-height: 16px;
+//   color: $blue;
+// }
+
+.personal-profile {
+  display: flex;
+  color: $blue;
+  padding-right: 28px;
+
+  &__img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: $blue;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: 600;
+    padding-right: 5px;
+    flex-grow: 1;
+  }
+
+  &__nickname {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__setting {
+    color:#200E32;
+    flex-shrink: 0;
+    font-size: 17px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 24px;
+    flex-grow: 1;
+  }
+
+  &__head {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__btn {
+    margin-top: auto;
+    text-align: left;
+    color: $primary;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration-line: underline;
+  }
+}
+
+.infoprofile {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-row-gap: 23px;
+  padding-top: 32px;
+
+  &__info {
+    font-size: 16px;
+    line-height: 24px;
+    color: $gray;
+
+    strong {
+      color: $blue;
+      margin-left: 15px;
+    
+    }
+  }
+  
+  &__text {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    font-size: 16px;
+    line-height: 24px;
+    color: $blue;
+    text-align: left;
+  }
+}
+
+.drop {
+  position: relative;
+  &__wrap {
+    &:hover {
+      .drop__box {
+        visibility: visible;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+  &__box {
+    position: absolute;
+    top: calc(100% + 18px);
+    min-width: 176px;
+    visibility: hidden;
+    background-color:rgba($white, 0.94);
+    border-radius: 8px;
+    min-height: 124px;
+    padding: 24px 0;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    
+    li {
+    
+      a {
+        display: flex;
+        padding: 8px 0;
+        justify-content: center;
+        color: $blue;
+    
+      i {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+      }
+      }
+
+      &:hover {
+        background-color: #ecf1f8;
+      }
+    }
+  }
+}
+}

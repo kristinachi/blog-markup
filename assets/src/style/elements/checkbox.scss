@@ -1,0 +1,63 @@
+.switcher {
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  // margin-top: 72px;
+  color: $blue;
+  
+
+  &__input {
+    display: none;
+    height: 0;
+    width: 0;
+    visibility: hidden;
+
+    &:checked + .switcher__box {
+      background-color: $primary;
+      transition: all 0.3s ease;
+
+      &:before {
+        background-color: $white;
+        left: calc(100% - 2px);
+	      transform: translateX(-100%) translateY(-50%);
+        transition: all 0.3s ease;
+      }
+		}
+  }
+
+  &__box {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 24px;
+    background: $white;
+    position: relative;
+    border-radius: 50px;
+    border: 1px solid $primary;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 30px;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border-radius: 50px;
+      background-color: $primary;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 2px;
+      transition: all 0.3s ease;
+    }
+
+    &:active {
+      &:before {
+        width: 24px;
+      }
+    }
+  }
+}
