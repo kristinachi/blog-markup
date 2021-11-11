@@ -6,7 +6,7 @@
 	<link rel="icon" href="./img/favIcon.png" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>APD</title>
+	<title>Blog</title>
 	<link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -15,33 +15,35 @@
 <header class="header">
   <div class="container">
     <div class="header-top">
-      <strong class="header__img">
+      <strong class="header__img" role="none">
         <a href="/">
-          <img src="img/logo.svg" alt="image description">
+          <img src="img/logo.svg" alt="logo">
         </a>
       </strong>
       <div class="header-right">
         <div class="header-profile">
           <span class="header-profile__name">John Doe</span>
           <div class="header-profile__img">
-            <img src="img/card-img-1.jpg" alt="personalbigicon">
+            <img src="img/card-img-1.jpg" alt="small personal logo">
           </div>
-          <i class="header-profile__icon icon icon-arrow-down"></i>
+          <a href="/" aria-label="more details"><i class="header-profile__icon icon icon-arrow-down"></i></a>
         </div>
-        <ul class="header-menu">
-          <li><a href="/"><i class="header-profile-icon icon icon-notification"></i></a></li>
-          <li><a href="/"><i class="header-profile-icon icon icon-game"></i></a></li>
-          <li><a href="/"><i class="header-profile-icon icon icon-setting"></i></a></li>
+        <ul class="header-menu" role="none">
+          <li><a href="/" aria-label="bell"><i class="header-profile-icon icon icon-notification"></i></a></li>
+          <li><a href="/" aria-label="play"><i class="header-profile-icon icon icon-game"></i></a></li>
+          <li><a href="/" aria-label="settings"><i class="header-profile-icon icon icon-setting"></i></a>
+          </li>
         </ul>
       </div>
     </div>
     <div class="header-bottom">
-      <ul class="header-pages">
+      <ul class="header-pages" role="none">
         <li><a href="/" class="active">FEED</a></li>
         <li><a href="/">EXPLORE</a></li>
         <li><a href="/">DISCUSSION <span></span></a></li>
       </ul>
-      <button class="header-add"></button>
+      <button class="header-add" aria-label="add new post">
+      </button>
     </div>
   </div>
 </header>
@@ -51,24 +53,24 @@
       <div>
         <div class="personal-profile">
           <div class="personal-profile__img">
-            <img src="img/card-img-1.jpg" alt="personalbigicon">
+            <img src="img/card-img-1.jpg" alt="Personal Photo Main">
           </div>
           <div class="personal-profile__content">
             <div class="personal-profile__head">
               <strong class="personal-profile__name">John Doe</strong>
-              <div>
-                <ul class="drop">
+              <div role="none">
+                <ul class="drop" role="none">
                   <li class="drop__wrap">
-                    <button class="personal-profile__setting ">
+                    <button class="personal-profile__setting" aria-label="more about your profile">
                       <i class="icon icon-square"></i>
                     </button>
                     <ul class="drop__box">
-                      <li>
+                      <li role="menuitem">
                         <a href="/"><i class="icon icon-edit"></i><span>Report User</span></a>
                       </li>
-                      <li>
+                      <li role="menuitem">
                         <a href="/"><i class="icon icon-close-square"></i><span>Block User</span></a>
-                      </li>                    
+                      </li>
                     </ul>
                   </li>
                 </ul>
@@ -84,22 +86,25 @@
         <div class="infoprofile">
 
           <div class="infoprofile__info"> <strong>45</strong> <br> synths </div>
-          <div class="infoprofile__info">  <strong>110</strong><br>followers</div>
-          <div class="infoprofile__info">  <strong>322</strong><br>following </div>
+          <div class="infoprofile__info"> <strong>110</strong><br>followers
+          </div>
+          <div class="infoprofile__info"> <strong>322</strong><br>following
+          </div>
 
           <!-- <div class="infoprofile__synths"><span><strong>45</strong><br>synths</span> </div>
           <div class="infoprofile__followers"> <span> <strong>110</strong><br>followers</span> </div>
           <div class="infoprofile__following"> <span> <strong>322</strong><br>following</span> </div> -->
 
-          <div class="infoprofile__text"> Cryptocurrencies including Ethereum, Ripple, and Litecoin have all plunged
+          <div class="infoprofile__text"> Cryptocurrencies including Ethereum, Ripple, and Litecoin have
+            all plunged
             between 20 to 30 percent each, according to CoinMarketCap. Here is the latest Ripple price news and live
             updates on XRP, bitcoin and Ethereum.
           </div>
 
-        </div>        
+        </div>
       </div>
       <div class="feed-scroll">
-        <div class="feed-filter">
+        <div class="feed-filter" tabindex="0">
           <label class="switcher">
             <span>Public</span>
             <input type="checkbox" checked class="switcher__input">
@@ -113,16 +118,17 @@
               <div class="card__head"></div>
               <div class="card__main">
                 <div class="card-text">
-                  <span>New air routes that promise cheap flights in New air routes that promise cheap flights in </span>
+                  <span>New air routes that promise cheap flights in New air routes that promise cheap flights in
+                  </span>
                 </div>
               </div>
               <div class="card__foot">
-                <div class="card-profile">
+                <a href="/" class="card-profile">
                   <div class="card-profile__img">
-                    <img src="img/card-img-1.jpg" alt="person">
+                    <img src="img/card-img-1.jpg" alt="profile photo">
                   </div>
                   <span class="card-profile__name"> Gregory Watkins</span>
-                </div>
+                </a>
                 <div>
                   <a href="/" class="card-link">Share</a>
                 </div>
@@ -135,16 +141,17 @@
               <div class="card__head"></div>
               <div class="card__main">
                 <div class="card-text">
-                  <span>New air routes that promise cheap flights in New air routes that promise cheap flights in </span>
+                  <span>New air routes that promise cheap flights in New air routes that promise cheap flights in
+                  </span>
                 </div>
               </div>
               <div class="card__foot">
-                <div class="card-profile">
+                <a href="/" class="card-profile">
                   <div class="card-profile__img">
-                    <img src="img/card-img-1.jpg" alt="person">
+                    <img src="img/card-img-1.jpg" alt="profile photo">
                   </div>
                   <span class="card-profile__name"> Gregory Watkins</span>
-                </div>
+                </a>
                 <div>
                   <a href="/" class="card-link">Share</a>
                 </div>
@@ -156,24 +163,28 @@
             <div class="card">
               <div class="card__head">
                 <div class="card-shared__text">Shared to</div>
-                <a href="/" class="card-tag" >#discussionaboutanimgttddjjdiscussionaboutanimgttddjj</a>
+                <a href="/" class="card-tag">#discussionaboutanimgttddjjdiscussionaboutanimgttddjj</a>
               </div>
               <div class="card__main">
                 <div class="card-text">
-                  <span>New air routes that promise cheap flights in New air routes that promise cheap flights in </span>
+                  <span>New air routes that promise cheap flights in New air routes that promise cheap flights in
+                  </span>
                 </div>
               </div>
               <div class="card__foot">
-                <div class="card-profile">
+                <a href="/" class="card-profile">
                   <div class="card-profile__img">
-                    <img src="img/card-img-1.jpg" alt="person">
+                    <img src="img/card-img-1.jpg" alt="profile photo">
                   </div>
                   <span class="card-profile__name"> Gregory Watkins</span>
-                </div>
+                </a>
                 <div>
-                  <ul class="card-actions">
-                    <li><button class="card-actions__btn"><i class="icon icon-show"></i>88</button></li>
-                    <li><button class="card-actions__btn primaryliked"><i class="icon icon-heart"></i>24</button></li>
+                  <ul class="card-actions" role="none">
+                    <li><button class="card-actions__btn" aria-label="88 views"><i
+                          class="icon icon-show"></i>88</button>
+                    </li>
+                    <li><button class="card-actions__btn primaryliked" aria-label="24 likes"><i
+                          class="icon icon-heart"></i>24</button></li>
                   </ul>
                 </div>
               </div>
@@ -182,47 +193,52 @@
 
           <div class="main-grid__col">
             <div class="card">
-              <div class="card__head"> 
+              <div class="card__head">
                 <div class="card-share">
-                    <a href="/"><i class="icon icon-share"></i>Shared via weblink</a>
+                  <a href="/" aria-label="shared via weblink"><i class="icon icon-share"></i>Shared via weblink</a>
                 </div>
               </div>
               <div class="card__main">
                 <div class="card-text">
-                  <span>New air routes that promise cheap flights in New air routes that promise cheap flights in </span>
+                  <span>New air routes that promise cheap flights in New air routes that promise cheap flights in
+                  </span>
                 </div>
               </div>
               <div class="card__foot">
-                <div class="card-profile">
+                <a href="/" class="card-profile">
                   <div class="card-profile__img">
-                    <img src="img/card-img-1.jpg" alt="person">
+                    <img src="img/card-img-1.jpg" alt="profile photo">
                   </div>
                   <span class="card-profile__name"> Gregory Watkins</span>
-                </div>
+                </a>
                 <div>
-                  <ul class="card-actions">
-                    <li><button class="card-actions__btn"><i class="icon icon-show"></i>88</button></li>
-                    <li><button class="card-actions__btn primaryliked"><i class="icon icon-heart"></i>24</button></li>
+                  <ul class="card-actions" role="none">
+                    <li><button class="card-actions__btn" aria-label="88 views"><i
+                          class="icon icon-show"></i>88</button></li>
+                    <li><button class="card-actions__btn primaryliked" aria-label="24 likes"><i
+                          class="icon icon-heart"></i>24</button></li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
+
           <div class="main-grid__col">
             <div class="card">
               <div class="card__head"></div>
               <div class="card__main">
                 <div class="card-text">
-                  <span>New air routes that promise cheap flights in New air routes that promise cheap flights in </span>
+                  <span>New air routes that promise cheap flights in New air routes that promise cheap flights in
+                  </span>
                 </div>
               </div>
               <div class="card__foot">
-                <div class="card-profile">
+                <a href="/" class="card-profile">
                   <div class="card-profile__img">
-                    <img src="img/card-img-1.jpg" alt="person">
+                    <img src="img/card-img-1.jpg" alt="profile photo">
                   </div>
                   <span class="card-profile__name"> Gregory Watkins</span>
-                </div>
+                </a>
                 <div>
                   <a href="/" class="card-link">Share</a>
                 </div>
@@ -235,16 +251,17 @@
               <div class="card__head"></div>
               <div class="card__main">
                 <div class="card-text">
-                  <span>New air routes that promise cheap flights in New air routes that promise cheap flights in </span>
+                  <span>New air routes that promise cheap flights in New air routes that promise cheap flights in
+                  </span>
                 </div>
               </div>
               <div class="card__foot">
-                <div class="card-profile">
+                <a href="/" class="card-profile">
                   <div class="card-profile__img">
-                    <img src="img/card-img-1.jpg" alt="person">
+                    <img src="img/card-img-1.jpg" alt="profile photo">
                   </div>
                   <span class="card-profile__name"> Gregory Watkins</span>
-                </div>
+                </a>
                 <div>
                   <a href="/" class="card-link">Share</a>
                 </div>
@@ -256,24 +273,28 @@
             <div class="card">
               <div class="card__head">
                 <div class="card-shared__text">Shared to</div>
-                <a href="/" class="card-tag" >#discussionaboutanimgttddjjdiscussionaboutanimgttddjj</a>
+                <a href="/" class="card-tag">#discussionaboutanimgttddjjdiscussionaboutanimgttddjj</a>
               </div>
               <div class="card__main">
                 <div class="card-text">
-                  <span>New air routes that promise cheap flights in New air routes that promise cheap flights in </span>
+                  <span>New air routes that promise cheap flights in New air routes that promise cheap flights in
+                  </span>
                 </div>
               </div>
               <div class="card__foot">
-                <div class="card-profile">
+                <a href="/" class="card-profile">
                   <div class="card-profile__img">
-                    <img src="img/card-img-1.jpg" alt="person">
+                    <img src="img/card-img-1.jpg" alt="profile photo">
                   </div>
                   <span class="card-profile__name"> Gregory Watkins</span>
-                </div>
+                </a>
                 <div>
-                  <ul class="card-actions">
-                    <li><button class="card-actions__btn"><i class="icon icon-show"></i>88</button></li>
-                    <li><button class="card-actions__btn primaryliked"><i class="icon icon-heart"></i>24</button></li>
+                  <ul class="card-actions" role="none">
+                    <li><button class="card-actions__btn" aria-label="88 views"><i
+                          class="icon icon-show"></i>88</button>
+                    </li>
+                    <li><button class="card-actions__btn primaryliked" aria-label="24 likes"><i
+                          class="icon icon-heart"></i>24</button></li>
                   </ul>
                 </div>
               </div>
@@ -282,38 +303,43 @@
 
           <div class="main-grid__col">
             <div class="card">
-              <div class="card__head"> 
+              <div class="card__head">
                 <div class="card-share">
-                    <a href="/"><i class="icon icon-share"></i>Shared via weblink</a>
+                  <a href="/" aria-label="shared via weblink"><i class="icon icon-share"></i>Shared via weblink</a>
                 </div>
               </div>
               <div class="card__main">
                 <div class="card-text">
-                  <span>New air routes that promise cheap flights in New air routes that promise cheap flights in </span>
+                  <span>New air routes that promise cheap flights in New air routes that promise cheap flights in
+                  </span>
                 </div>
               </div>
               <div class="card__foot">
-                <div class="card-profile">
+                <a href="/" class="card-profile">
                   <div class="card-profile__img">
-                    <img src="img/card-img-1.jpg" alt="person">
+                    <img src="img/card-img-1.jpg" alt="profile photo">
                   </div>
                   <span class="card-profile__name"> Gregory Watkins</span>
-                </div>
+                </a>
                 <div>
-                  <ul class="card-actions">
-                    <li><button class="card-actions__btn"><i class="icon icon-show"></i>88</button></li>
-                    <li><button class="card-actions__btn primaryliked"><i class="icon icon-heart"></i>24</button></li>
+                  <ul class="card-actions" role="none">
+                    <li><button class="card-actions__btn" aria-label="88 views"><i
+                          class="icon icon-show"></i>88</button>
+                    </li>
+                    <li><button class="card-actions__btn primaryliked" aria-label="24 likes"><i
+                          class="icon icon-heart"></i>24</button></li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        </div>
+      </div>
   </section>
 </main>
-	</div>
-	
-	<script src="js/my.js"></script>
+</div>
+
+<script src="js/my.js"></script>
 </body>
+
 </html>

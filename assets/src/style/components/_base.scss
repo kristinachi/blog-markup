@@ -14,8 +14,8 @@ html {
   overflow: hidden;
   height: 100%;
   display: grid;
-  grid-template-rows: auto  minmax(0, 1fr);
-  }
+  grid-template-rows: auto minmax(0, 1fr);
+}
 
 main {
   overflow-y: auto;
@@ -30,7 +30,6 @@ main {
 }
 
 .page-section {
-  
   @media (min-width: $breakpoint-sm) {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
@@ -39,10 +38,9 @@ main {
 }
 
 .grid-container {
-  
   @media (min-width: $breakpoint-sm) {
     display: grid;
-    grid-template-columns: minmax(0, 350px) minmax(0,1fr);
+    grid-template-columns: minmax(0, 350px) minmax(0, 1fr);
     grid-template-rows: minmax(0, 1fr);
     grid-column-gap: 24px;
   }
@@ -95,7 +93,6 @@ address {
 
 input {
   border: 0;
-  outline: 0;
 
   &[type="text"],
   &[type="password"],
@@ -107,7 +104,6 @@ input {
 
 button {
   border: 0;
-  outline: 0;
   padding: 0;
   background-color: unset;
   cursor: pointer;
