@@ -1,33 +1,35 @@
 <header class="header">
   <div class="container">
     <div class="header-top">
-      <strong class="header__img">
+      <strong class="header__img" role="none">
         <a href="/">
-          <img src="img/logo.svg" alt="image description">
+          <img src="img/logo.svg" alt="logo">
         </a>
       </strong>
       <div class="header-right">
         <div class="header-profile">
           <span class="header-profile__name">John Doe</span>
           <div class="header-profile__img">
-            <img src="img/card-img-1.jpg" alt="personalbigicon">
+            <img src="img/card-img-1.jpg" alt="small personal logo">
           </div>
-          <i class="header-profile__icon icon icon-arrow-down"></i>
+          <a href="/" aria-label="more details"><i class="header-profile__icon icon icon-arrow-down"></i></a>
         </div>
-        <ul class="header-menu">
-          <li><a href="/"><i class="header-profile-icon icon icon-notification"></i></a></li>
-          <li><a href="/"><i class="header-profile-icon icon icon-game"></i></a></li>
-          <li><a href="/"><i class="header-profile-icon icon icon-setting"></i></a></li>
+        <ul class="header-menu" role="none">
+          <li><a href="/" aria-label="bell"><i class="header-profile-icon icon icon-notification"></i></a></li>
+          <li><a href="/" aria-label="play"><i class="header-profile-icon icon icon-game"></i></a></li>
+          <li><a href="/" aria-label="settings"><i class="header-profile-icon icon icon-setting"></i></a>
+          </li>
         </ul>
       </div>
     </div>
     <div class="header-bottom">
-      <ul class="header-pages">
+      <ul class="header-pages" role="none">
         <li><a href="/" class="active">FEED</a></li>
         <li><a href="/">EXPLORE</a></li>
         <li><a href="/">DISCUSSION <span></span></a></li>
       </ul>
-      <button class="header-add"></button>
+      <button class="header-add" aria-label="add new post">
+      </button>
     </div>
   </div>
 </header>
